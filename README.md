@@ -1,11 +1,11 @@
 Repositorio:
 
-https://github.com/ivaniraldi/ivaniraldi.github.io
+https://github.com/ramirosepulveda/ramirosepulveda.github.io
 
 Link a pages:
 
-https://ivaniraldi.github.io/
+https://ramirosepulveda.github.io/
 
 Colaboraciones:
 
-https://github.com/ramirosepulveda/ramirosepulveda.github.io/commits/main/
+
