@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(221, 238, 238);
+    /* background-color: rgb(221, 238, 238); */
 }
 
 .progress {
@@ -15,7 +15,7 @@ body {
 
 .borde-izq { 
 background-color: rgb(224, 184, 131);
-width: 16px;
+width: 10px;
 height: 160px;
 }
 
