@@ -1,6 +1,8 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     /* background-color: rgb(221, 238, 238); */
+        
 }
 
 .progress {
@@ -13,72 +15,279 @@ body {
     transform: rotate(180deg);
 }
 
-.borde-izq { 
+.borde-izq-1 { 
 background-color: rgb(224, 184, 131);
-width: 10px;
-height: 160px;
+width: 16px;
+height: 80px;
+position: relative;
+top: -16px;
+left: -16px;
+
 }
+
+.foto img {
+    max-width: 250px;
+}
+
+/* .columna-izquierda, .foto-borde {
+    padding-left: 10px;
+} */
 
 .nombre {
-    background-color: rgb(224, 184, 131);
-    height: 160px;
+    background-color: #e0b883;
+    height: 80px;
+    font-family: 'Source Code Pro', monospace;
 }
 
-  .education {
-    width: min(500px, 95vw);
+.nombre-xs {
+    background-color: #e0b883;
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.principal {
+    position: ;
+}
+
+ /*----------------------------------*/
+
+
+  .cd-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0 10%;
+    border-radius: 2px;
   }
-  .education__heading {
-    padding-inline-start: 4rem;
+  .cd-container::after {
+    content: '';
+    display: table;
+    clear: both;
   }
-  .education__heading h4 {
-    font-size: 2rem;
-    margin-block: 0.5rem;
-  }
-  .education__content {
+  
+  /* -------------------------------- 
+  
+  Main components 
+  
+  -------------------------------- */
+  
+  
+  #cd-timeline {
     position: relative;
-    padding: 1rem 1rem 1rem 4rem;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    padding: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
-  .education__content h5 {
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 1rem;
-    margin-block: 0;
-  }
-  .education__content p {
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 0.9rem;
-    margin-block-start: 0.5rem;
-    margin-block-end: 0;
-  }
-  .education__content .year {
+  #cd-timeline::before {
+    content: '';
     position: absolute;
-    content: var(--year);
-    width: 2rem;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.6rem;
-    color: white;
-    border-radius: 50%;
-    background-color: #333;
-    box-shadow: inset 0 0 0 1px white;
-    border: 1px solid #333;
-    left: 1rem;
-    top: 0.74rem;
-  }
-  .education__content:hover {
-    background-color: rgba(230, 230, 230, 0.48);
-    border-radius: 0.25rem;
-  }
-  .education__content:not(:last-child):before {
-    position: absolute;
-    content: "";
+    top: 0;
+    left: 25px;
+    height: 100%;
     width: 4px;
-    background-color: #333;
-    left: calc(2rem - 2px);
-    top: 2.74rem;
-    bottom: -0.74rem;
-    z-index: 1;
+    background: #e0b883;
+  }
+  @media only screen and (min-width: 1170px) {
+    #cd-timeline {
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+    #cd-timeline::before {
+      left: 50%;
+      margin-left: -2px;
+    }
+  }
+  
+  .cd-timeline-block {
+    position: relative;
+    margin: 2em 0;
+  }
+  .cd-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-block {
+      margin: 4em 0;
+    }
+    .cd-timeline-block:first-child {
+      margin-top: 0;
+    }
+    .cd-timeline-block:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .cd-timeline-img {
+    position: absolute;
+    top: 16px;
+    left: 19px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #e0b883, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
+  .cd-timeline-img {
+    background: #cc9a5a
+  }
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-img {
+      width: 15px;
+      height: 15px;
+      left: 50%;
+      margin-left: -7.5px;
+      margin-top: 7.5px;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+    }
+  }
+  
+  .cd-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    margin-right: 30px;
+    background: #333C42;
+    border-radius: 2px;
+    padding: 1em;
+    .timeline-content-info {
+      background: #2B343A;
+      padding: 5px 10px;
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      box-shadow:  inset 0 2px 0 #00000014;
+      border-radius: 2px;
+      i {
+        margin-right: 5px;
+      }
+      .timeline-content-info-title, .timeline-content-info-date {  
+        width: calc(50% - 2px);
+        display: inline-block;
+      }
+      @media (max-width: 500px) {
+        .timeline-content-info-title, .timeline-content-info-date {  
+          display: block;
+          width:100%;
+        } 
+      }
+    }
+    .content-skills {
+      font-size: 12px;
+      padding:0;
+      margin-bottom: 0;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        background: #40484D;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 2px 10px;
+        color: rgba(255,255,255,0.7);
+        margin: 3px 2px;
+        text-align: center;
+        flex-grow: 1;
+      }
+    }
+  }
+  .cd-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-timeline-content h2 {
+    color: rgba(255,255,255,.9);
+    margin-top:0;
+    margin-bottom: 5px;
+  }
+  .cd-timeline-content p, .cd-timeline-content .cd-date {
+    color: rgba(255,255,255,.7);
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+  .cd-timeline-content .cd-date {
+    display: inline-block;
+  }
+  .cd-timeline-content p {
+    margin: 1em 0;
+    line-height: 1.6;
+  }
+  
+  .cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #333C42;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .cd-timeline-content h2 {
+      font-size: 20px;
+      font-size: 1.25rem;
+    }
+    .cd-timeline-content p {
+      font-size: 16px;
+      font-size: 1rem;
+    }
+    .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+      font-size: 14px;
+      font-size: 0.875rem;
+    }
+  }
+  @media only screen and (min-width: 1170px) {
+    .cd-timeline-content {
+      color: white;
+      margin-left: 0;
+      padding: 1.6em;
+      width: 45%;
+      margin: 0 2%
+    }
+    .cd-timeline-content::before {
+      top: 24px;
+      left: 100%;
+      border-color: transparent;
+      border-left-color: #333C42;
+    }
+    .cd-timeline-content .cd-date {
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 6px;
+      font-size: 16px;
+      font-size: 1rem;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content {
+      float: right;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+      top: 24px;
+      left: auto;
+      right: 100%;
+      border-color: transparent;
+      border-right-color: #333C42;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+      float: right;
+    }
+    .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+      left: auto;
+      right: 122%;
+      text-align: right;
+    }
   }
