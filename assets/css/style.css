@@ -49,6 +49,54 @@ h1 {
     margin: 0;
 }
 
+td,
+table {
+    border: 2px solid rgb(114, 158, 46);
+    border-collapse: collapse;
+    height: 30px;
+    text-align: center;
+            
+}
+
+.table_navegador,
+.td_navegador {
+    border: 2px solid rgb(114, 158, 46);
+    border-collapse: collapse;
+    padding: 5px 10px 5px;
+    height: revert;
+}
+
+/* PIE DE PAGINA */
+
+.footer {
+    background-color:#cc9a5a;
+    font-size: 0.9em;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0px 0px 0px;
+}
+
+.footer li {
+    display: inline;
+}
+
+/* Desde aqui hay elementos que he explorado al inspeccionar otras paginas por curiosidad */
+
+.footer svg:hover {
+    fill: rgb(111, 128, 144);
+}
+
+
 
  /*----------------------------------*/
 
